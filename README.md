@@ -1,2 +1,17 @@
 # SendCash
-Economy plugin for PocketMine-MP.
+Economy plugin for PocketMine-MP.OPからオンラインのプレイヤーに一斉に送金できたりするプラグイン。OPの所持金は減りません。
+##How to use
+/cash send <player> <amount>...<player>に<amount>を送金します。
+/cash grant <amount>...<amount>を送金します。
+##popke LICENSE
+1.プラグインをサーバーで使用したとき、起動時にこのライセンスのことについて書かれている場合とGitHubにアップッロードされているプラグインを使用するときは、このライセンスに同意した上でこのプラグインを使用して下さい。
+
+2.このライセンスを使用しているプラグインは全て無料で使用できます。
+
+3.改造は自由ですが改造する時は4.も確認して下さい。
+
+4.改造したものを配布することは禁止しませんがauthorにpopkechupki、authorsに改造した人の名前を入れて配布して下さい。また、それを配布するときに配布するプラグインの作者がpopkechupkiであることをわかるように記載して下さい。
+
+5.二次配布や再配布は禁止しませんが、このプラグインの作成者がpopkechupkiであるとわかるように記載して下さい。
+
+6.popke LICENSEを使用しているプラグインが公式での配布を停止した場合、直ちに使用を中止して下さい。
