@@ -43,8 +43,8 @@ class SendCash extends PluginBase implements Listener {
                     $players = Server::getInstance()->getOnlinePlayers();
                     if(!isset($args[0])) return $sender->sendMessage("/cash grant <amount>");
                     foreach ($players as $sender) {
-                        $user = $sender->getName();
-                        $this->PocketMoney->grantMoney($user, +$args[0]);
+                        $n = $sender->getName();
+                        $this->PocketMoney->grantMoney($n, +$args[0]);
                     }
                     if (!$sender instanceof Player){
                         $this->getLogger()->info("オンラインプレイヤー全員に".$args[0]."を送りました。");
