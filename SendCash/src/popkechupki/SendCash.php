@@ -32,6 +32,7 @@ class SendCash extends PluginBase implements Listener {
                     if(!isset($args[0], $args[1])) return $sender->sendMessage("/cash send <player> <amount>");
                     if ($args[0] == $p) return $sender->sendMessage("[SendCash]自分には送金できません。");
                     if(!$args[0] instanceof Player) return $sender->sendMessage("[SendCash]プレイヤーが見つかりませんでした。");
+                    $this->PocketMoney->grantMoney($p, -$args[1]);
                     $this->PocketMoney->grantMoney($args[0], +$args[1]);
                     if (!$sender instanceof Player){
                         $this->getLogger()->info($args[0]."に".$args[1]."を送りました。");
