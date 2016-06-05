@@ -1,8 +1,8 @@
 # SendCash
 Economy plugin for PocketMine-MP.OPからオンラインのプレイヤーに一斉に送金できたりするプラグイン。OPの所持金は減りません。
 ##How to use
-/cash send <player> <amount>...<player>に<amount>を送金します。
-/cash grant <amount>...<amount>を送金します。
+/cash send <player> <金額>...<player>に<金額>を送金します。
+/cash grant <金額>...<金額>を送金します。
 ##popke LICENSE
 1.プラグインをサーバーで使用したとき、起動時にこのライセンスのことについて書かれている場合とGitHubにアップッロードされているプラグインを使用するときは、このライセンスに同意した上でこのプラグインを使用して下さい。
 
