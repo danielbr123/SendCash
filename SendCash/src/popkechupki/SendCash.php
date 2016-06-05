@@ -25,10 +25,12 @@ class SendCash extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
     }
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+        $p = $sender->getName();
         if($command->getName() =="cash"){
             switch (strtolower(array_shift($args))){
                 case "send":
                     if(!isset($args[0], $args[1])) return $sender->sendMessage("/cash send <player> <amount>");
+                    if ($args[0] == $p) return $sender->sendMessage("[SendCash]自分には送金できません。");
                     if(!$args[0] instanceof Player) return $sender->sendMessage("[SendCash]プレイヤーが見つかりませんでした。");
                     $this->PocketMoney->grantMoney($args[0], +$args[1]);
                     if (!$sender instanceof Player){
@@ -41,7 +43,6 @@ class SendCash extends PluginBase implements Listener {
                 case "grant":
                     if (!$sender->isOP()) return $sender->sendMessage("[SendCash]このコマンドはOPのみ実行できます。");
                     $players = Server::getInstance()->getOnlinePlayers();
-                    $p = $sender->getName();
                     if(!isset($args[0])) return $sender->sendMessage("/cash grant <amount>");
                     if (!$sender instanceof Player){
                         $this->getLogger()->info("オンラインプレイヤー全員に".$args[0]."を送りました。");
