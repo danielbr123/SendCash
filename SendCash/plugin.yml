@@ -1,0 +1,10 @@
+name: SendCash
+main: popkechupki\SendCash
+version: 0.1
+api: [1.13.0]
+load: POSTWORLD
+author: popkechupki
+description: "お金を配布するコマンドを追加するぷらぐいん"
+commands:
+ cash:
+  description: "SendCashのメインコマンド"
